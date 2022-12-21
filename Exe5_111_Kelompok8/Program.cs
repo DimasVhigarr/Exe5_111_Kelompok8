@@ -97,7 +97,11 @@ namespace Exe5_111_Kelompok8
                                 myQueue.DeleteQue();
                             }
                             break;
-
+                        case '3':
+                            {
+                                myQueue.DisplayQueue();
+                            }
+                            break;
                     }
                 }
             }

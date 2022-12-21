@@ -102,6 +102,8 @@ namespace Exe5_111_Kelompok8
                                 myQueue.DisplayQueue();
                             }
                             break;
+                        case '4':
+                            return;
                     }
                 }
             }

@@ -39,5 +39,17 @@ namespace Exe5_111_Kelompok8
             }
             Console.WriteLine("{0} inserted into Queue", item);
         }
+        void DeleteQue()
+        {
+            if(this.nama_depan == null)
+            {
+                Console.WriteLine("The Queue is empty");
+                return;
+            }
+            Node current = this.nama_depan;
+            this.nama_depan = this.nama_depan.next;
+            Console.WriteLine("Item deleted is {0}", current.data);
+        }
+
     }
 }

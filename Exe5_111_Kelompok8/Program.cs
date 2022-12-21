@@ -20,5 +20,9 @@ namespace Exe5_111_Kelompok8
     {
         Node nama_depan;
         Node nama_belakang;
+        public LinkListQueue()
+        {
+            this.nama_depan = this.nama_belakang = null;
+        }
     }
 }

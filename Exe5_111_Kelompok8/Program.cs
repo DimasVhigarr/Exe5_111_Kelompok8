@@ -18,46 +18,46 @@ namespace Exe5_111_Kelompok8
     }
     internal class LinkListQueue
     {
-        Node nama_depan;
-        Node nama_belakang;
+        Node dimas;
+        Node vhigar;
         public LinkListQueue()
         {
-            this.nama_depan = this.nama_belakang = null;
+            dimas = vhigar = null;
         }
         internal void InsertQue(int item)
         {
             Node newNode = new Node(item);
 
-            if(this.nama_belakang == null)
+            if(vhigar == null)
             {
-                this.nama_depan = this.nama_belakang = newNode;
+                dimas = vhigar = newNode;
             }
             else
             {
-                this.nama_belakang.next = newNode;
-                this.nama_belakang = newNode;
+                vhigar.next = newNode;
+                vhigar = newNode;
             }
             Console.WriteLine("{0} inserted into Queue", item);
         }
         void DeleteQue()
         {
-            if(this.nama_depan == null)
+            if(dimas == null)
             {
                 Console.WriteLine("The Queue is empty");
                 return;
             }
-            Node current = this.nama_depan;
-            this.nama_depan = this.nama_depan.next;
+            Node current = dimas;
+            dimas = dimas.next;
             Console.WriteLine("Item deleted is {0}", current.data);
         }
         void DisplayQueue()
         {
-            if(this.nama_depan == null)
+            if(dimas == null)
             {
                 Console.WriteLine("The Queue is empty");
                 return;
             }
-            Node current = this.nama_depan;
+            Node current = dimas;
 
             while(current != null)
             {
@@ -65,6 +65,29 @@ namespace Exe5_111_Kelompok8
                 current = current.next;
             }
             Console.WriteLine();
+        }
+        static void Main(string[] args)
+        {
+            LinkListQueue myQueue = new LinkListQueue();
+            char ch;
+            while(true)
+            {
+                try
+                {
+                    Console.WriteLine("Menu");
+                    Console.WriteLine("1. Implement Insert Operation");
+                    Console.WriteLine("2. Implement Delete Operation");
+                    Console.WriteLine("3. Display Values");
+                    Console.WriteLine("4. Exit");
+                    Console.Write("\n Enter your choice (1-4) : ");
+                    ch = Convert.ToChar(Console.ReadLine());
+                    Console.WriteLine();
+                    switch (ch)
+                    {
+
+                    }
+                }
+            }
         }
     }
 }

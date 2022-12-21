@@ -50,6 +50,21 @@ namespace Exe5_111_Kelompok8
             this.nama_depan = this.nama_depan.next;
             Console.WriteLine("Item deleted is {0}", current.data);
         }
+        void DisplayQueue()
+        {
+            if(this.nama_depan == null)
+            {
+                Console.WriteLine("The Queue is empty");
+                return;
+            }
+            Node current = this.nama_depan;
 
+            while(current != null)
+            {
+                Console.Write(current.data + "  ");
+                current = current.next;
+            }
+            Console.WriteLine();
+        }
     }
 }

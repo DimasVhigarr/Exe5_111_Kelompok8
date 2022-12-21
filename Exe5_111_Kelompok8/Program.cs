@@ -16,4 +16,9 @@ namespace Exe5_111_Kelompok8
             next = null;
         }
     }
+    internal class LinkListQueue
+    {
+        Node nama_depan;
+        Node nama_belakang;
+    }
 }

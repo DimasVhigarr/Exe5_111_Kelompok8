@@ -8,9 +8,9 @@ namespace Exe5_111_Kelompok8
 {
     internal class Node
     {
-        internal int data;
+        internal string data;
         internal Node next;
-        public Node(int d)
+        public Node(string d)
         {
             data = d;
             next = null;
@@ -24,7 +24,7 @@ namespace Exe5_111_Kelompok8
         {
             dimas = vhigar = null;
         }
-        internal void InsertQue(int item)
+        internal void InsertQue(string item)
         {
             Node newNode = new Node(item);
 
@@ -87,7 +87,7 @@ namespace Exe5_111_Kelompok8
                         case '1':
                             {
                                 Console.Write("Enter a number: ");
-                                int item = Convert.ToInt32(System.Console.ReadLine());
+                                string item = Console.ReadLine();
                                 Console.WriteLine();
                                 myQueue.InsertQue(item);
                             }
@@ -104,7 +104,16 @@ namespace Exe5_111_Kelompok8
                             break;
                         case '4':
                             return;
+                        default:
+                            {
+                                Console.WriteLine("Invalid Option!");
+                            }
+                            break;
                     }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Check for the values entered.");
                 }
             }
         }

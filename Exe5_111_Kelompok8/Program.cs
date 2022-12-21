@@ -24,5 +24,20 @@ namespace Exe5_111_Kelompok8
         {
             this.nama_depan = this.nama_belakang = null;
         }
+        internal void InsertQue(int item)
+        {
+            Node newNode = new Node(item);
+
+            if(this.nama_belakang == null)
+            {
+                this.nama_depan = this.nama_belakang = newNode;
+            }
+            else
+            {
+                this.nama_belakang.next = newNode;
+                this.nama_belakang = newNode;
+            }
+            Console.WriteLine("{0} inserted into Queue", item);
+        }
     }
 }

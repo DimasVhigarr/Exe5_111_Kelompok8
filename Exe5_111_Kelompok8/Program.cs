@@ -92,6 +92,12 @@ namespace Exe5_111_Kelompok8
                                 myQueue.InsertQue(item);
                             }
                             break;
+                        case '2':
+                            {
+                                myQueue.DeleteQue();
+                            }
+                            break;
+
                     }
                 }
             }

@@ -84,7 +84,14 @@ namespace Exe5_111_Kelompok8
                     Console.WriteLine();
                     switch (ch)
                     {
-
+                        case '1':
+                            {
+                                Console.Write("Enter a number: ");
+                                int item = Convert.ToInt32(System.Console.ReadLine());
+                                Console.WriteLine();
+                                myQueue.InsertQue(item);
+                            }
+                            break;
                     }
                 }
             }
